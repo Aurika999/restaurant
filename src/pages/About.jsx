@@ -5,7 +5,6 @@ import "../styles/about_responsive.css";
 import aboutBg from "../assets/images/about.jpg";
 import Testimonials from "../components/Testimonials";
 import Intro from "../components/Intro";
-import MeniuRestaurant from "../components/MeniuRestaurant";
 
 function About() {
   const { t } = useTranslation("about");
