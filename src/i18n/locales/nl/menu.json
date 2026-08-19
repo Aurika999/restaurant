@@ -2,6 +2,54 @@
   "title": "The Garden Terrace Restaurant",
   "heading": "Ons menu",
   "emptyState": "Er zijn geen gerechten in deze categorie.",
+  "eventMenu": {
+    "button": "Evenementenmenu",
+    "modalTitle": "Banketmenu",
+    "download": "PDF downloaden",
+    "close": "Sluiten",
+    "content": {
+      "title": "Banketmenu Nr. 1",
+      "price": "Prijs: 75 EUR",
+      "subtitle": "Tafel met champagne (Zweeds buffet)",
+      "sections": [
+        {
+          "heading": "Koude gerechten",
+          "items": [
+            "Gevulde vis of visschotel",
+            "Zure zult (in gelei)",
+            "Gevulde kip",
+            "Assortiment huisgemaakte vleesrolletjes (5 soorten)",
+            "Gevulde courgettes",
+            "Gevulde champignons"
+          ]
+        },
+        {
+          "heading": "Salades",
+          "items": [
+            "Caesarsalade met kip",
+            "Vleessalade met mayonaise",
+            "Assortiment (kaas, komkommer, tomaten met kaashapje)"
+          ]
+        },
+        {
+          "heading": "Warme gerechten",
+          "items": [
+            "1) Vleesschotel, gebakken aardappelen en zure augurken",
+            "2) Banusj: gevulde forel met groenten, champignons in roomsaus, kippenlever met ui",
+            "3) Koolrolletjes met zure room"
+          ]
+        },
+        {
+          "heading": "Dessert",
+          "items": ["Zoetigheden en fruit"]
+        },
+        {
+          "heading": "Dranken",
+          "items": ["Onbeperkt water, cola, fanta en koffie"]
+        }
+      ]
+    }
+  },
   "categories": {
     "toate": "Alle",
     "aperitive": "Voorgerechten",

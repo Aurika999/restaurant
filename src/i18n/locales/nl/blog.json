@@ -1,13 +1,18 @@
 {
   "heading": "Onze blog",
+  "readMore": "Lees meer",
+  "readLess": "Lees minder",
   "posts": [
     "Ontdek het verhaal achter onze signature-gerechten en alles waar we trots op zijn in de keuken van het restaurant.",
     "Recept van de week: een eenvoudig gerecht om thuis na te maken, geïnspireerd op ons seizoensmenu.",
     "Kom te weten hoe wij verse ingrediënten selecteren en waarom kwaliteit onze absolute prioriteit blijft.",
     "Een blik achter de schermen: hoe ons keukenteam elk bijzonder evenement voorbereidt.",
     "Tips van onze chef om wijn perfect te combineren met de gerechten op het menu.",
-    "Waarom ons terras de ideale plek is voor privé-evenementen en een familiediner."
+    "Waarom ons terras de ideale plek is voor privé-evenementen en een familiediner.",
+    "Hoe kies je de juiste feestzaal voor een verjaardag of doopfeest: enkele essentiële aandachtspunten voor je boekt."
   ],
+  "postTitles": ["", "", "", "", "", "", "Hoe kies je de juiste feestzaal voor een verjaardag of doopfeest"],
+  "postContents": ["", "", "", "", "", "", "De keuze van de juiste zaal bepaalt vaak de toon van het hele feest, of het nu gaat om een verjaardag of een doopfeest. Controleer eerst de werkelijke capaciteit van de zaal ten opzichte van het aantal gasten: een te grote zaal voelt \"leeg\" aan, terwijl een te kleine zaal onhandig is voor tafels, stoelen, een dansvloer of een speelhoek voor kinderen bij een doopfeest.\n\nDe locatie en bereikbaarheid zijn net zo belangrijk als de aankleding. Een zaal die makkelijk bereikbaar is, met voldoende parkeerplaatsen voor gasten en idealiter goed toegankelijk voor oudere gasten of gezinnen met jonge kinderen, vermindert de stress op de dag zelf. Het loont om de zaal vooraf zelf te bezoeken in plaats van alleen op foto's af te gaan, zodat je een reëel beeld krijgt van het natuurlijke licht, de plafondhoogte en de algemene sfeer.\n\nDe sfeer en de mogelijkheid tot personalisatie maken het verschil tussen een \"standaard\" zaal en een onvergetelijke ervaring. Een terras of zaal met natuurlijke elementen, groen en goed licht voor foto's biedt een setting die weinig extra decoratie nodig heeft, wat ook het decoratiebudget verlaagt.\n\nEen ander essentieel criterium is welke diensten inbegrepen zijn: het menu, bedieningspersoneel, geluidsapparatuur, de mogelijkheid om een artiest of dj mee te brengen, en de flexibiliteit van het tijdschema (hoelang je de zaal tot je beschikking hebt, of verlenging mogelijk is). Een team dat met deze details rekening houdt, met een menu dat aangepast kan worden voor kinderen of gasten met specifieke wensen, maakt van de organisatie een ontspannen ervaring in plaats van een lange lijst compromissen.\n\nBij The Garden Terrace bieden we een ruim terras met een natuurlijke sfeer en een menu dat aan te passen is voor privé-evenementen zoals verjaardagen of doopfeesten — neem gerust contact met ons op om samen de juiste details voor uw feest te bepalen."],
   "reservations": {
     "stars": "5 Sterren",
     "heading": "Maak een reservering",

@@ -2,6 +2,54 @@
   "title": "The Garden Terrace Restaurant",
   "heading": "Meniul nostru",
   "emptyState": "Nu există preparate în această categorie.",
+  "eventMenu": {
+    "button": "Meniu eveniment",
+    "modalTitle": "Meniu banchet",
+    "download": "Descarcă PDF",
+    "close": "Închide",
+    "content": {
+      "title": "Meniu Banchet Nr. 1",
+      "price": "Preț: 75 EUR",
+      "subtitle": "Masă cu șampanie (bufet suedez)",
+      "sections": [
+        {
+          "heading": "Feluri reci",
+          "items": [
+            "Pește umplut sau platou asortat de pește",
+            "Piftie (răcitură)",
+            "Pui umplut",
+            "Asortiment de ruladă de carne, făcute în casă (5 tipuri)",
+            "Dovlecei umpluți",
+            "Ciuperci umplute"
+          ]
+        },
+        {
+          "heading": "Salate",
+          "items": [
+            "Salată Caesar cu pui",
+            "Salată de carne cu maioneză",
+            "Platou asortat (brânză, castraveți, roșii cu gustare din brânză)"
+          ]
+        },
+        {
+          "heading": "Feluri calde",
+          "items": [
+            "1) Platou de carne, cartofi copți și castraveți murați",
+            "2) Banuș: păstrăv umplut cu legume, ciuperci în sos de smântână, ficat de pui cu ceapă",
+            "3) Sarmale cu smântână"
+          ]
+        },
+        {
+          "heading": "Desert",
+          "items": ["Dulciuri și fructe"]
+        },
+        {
+          "heading": "Băuturi",
+          "items": ["Apă nelimitată, cola, fanta și cafea"]
+        }
+      ]
+    }
+  },
   "categories": {
     "toate": "Toate",
     "aperitive": "Aperitive",

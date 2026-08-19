@@ -1,5 +1,5 @@
 // src/pages/Blog.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Import CSS (adaptează căile dacă ai pus fișierele în assets/styles)
@@ -14,6 +14,7 @@ import blog3 from "../assets/images/blog_3.jpg";
 import blog4 from "../assets/images/blog_4.jpg";
 import blog5 from "../assets/images/blog_5.jpg";
 import blog6 from "../assets/images/blog_6.jpg";
+import blogEventHall from "../assets/images/masa.jpeg";
 import reservationsImg from "../assets/images/reservations.jpg";
 
 const blogPosts = [
@@ -23,11 +24,13 @@ const blogPosts = [
     { img: blog4 },
     { img: blog5 },
     { img: blog6 },
+    { img: blogEventHall },
 ];
 
 export default function Blog() {
     const { t } = useTranslation("blog");
     const personOptions = t("reservations.personOptions", { returnObjects: true });
+    const [expandedIndex, setExpandedIndex] = useState(null);
 
     return (
         <div className="super_container">
@@ -54,26 +57,49 @@ export default function Blog() {
             <div className="blog">
                 <div className="container">
                     <div className="row">
-                        {blogPosts.map((post, index) => (
-                            <div className="col-lg-6 blog_col" key={index}>
-                                <div className="blog_post">
-                                    <div className="blog_post_image_container">
-                                        <div className="blog_post_image">
-                                            <img src={post.img} alt="" />
+                        {blogPosts.map((post, index) => {
+                            const title = t(`postTitles.${index}`);
+                            const fullContent = t(`postContents.${index}`);
+                            const isExpanded = expandedIndex === index;
+                            return (
+                                <div className="col-lg-6 blog_col" key={index}>
+                                    <div className="blog_post">
+                                        <div className="blog_post_image_container">
+                                            <div className="blog_post_image">
+                                                <img src={post.img} alt="" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="blog_post_content">
-                                        <div className="blog_post_info">
-                                            <ul className="d-flex flex-row align-items-center justify-content-start">
-                                            </ul>
-                                        </div>
-                                        <div className="blog_post_text">
-                                            <p>{t(`posts.${index}`)}</p>
+                                        <div className="blog_post_content">
+                                            {title && (
+                                                <div className="blog_post_title">
+                                                    <span
+                                                        className="blog_post_title_toggle"
+                                                        onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                                                    >
+                                                        {title}
+                                                    </span>
+                                                </div>
+                                            )}
+                                            <div className="blog_post_text">
+                                                {isExpanded
+                                                    ? fullContent.split("\n\n").map((paragraph, i) => (
+                                                          <p key={i}>{paragraph}</p>
+                                                      ))
+                                                    : <p>{t(`posts.${index}`)}</p>}
+                                            </div>
+                                            {title && (
+                                                <div
+                                                    className="blog_post_read_more"
+                                                    onClick={() => setExpandedIndex(isExpanded ? null : index)}
+                                                >
+                                                    {isExpanded ? t("readLess") : t("readMore")}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
                     <div className="row load_more_row">

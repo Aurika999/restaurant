@@ -1,6 +1,11 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Wine, Beef, Soup, IceCream, Salad, Leaf } from "lucide-react";
+import { Wine, Beef, Soup, IceCream, Salad, Leaf, FileText, X, Download } from "lucide-react";
+import { jsPDF } from "jspdf";
+
+import meniuEvenimentRo from "../assets/images/meniu_eveniment_ro.jpeg";
+import meniuEvenimentUk from "../assets/images/meniu_eveniment_uk.jpeg";
+import meniuEvenimentNl from "../assets/images/meniu_eveniment_nl.jpeg";
 
 import ardeiUmpluti from "../assets/images/menu_dishes/ardei_umpluti.jpg";
 import salataCezar from "../assets/images/menu_dishes/salata_cezar.jpg";
@@ -48,6 +53,12 @@ const IMAGINI_PREPARATE = {
   21: capucino,
   26: clatiteBranza,
   27: cheesecake,
+};
+
+const IMAGINI_MENIU_EVENIMENT = {
+  ro: meniuEvenimentRo,
+  uk: meniuEvenimentUk,
+  nl: meniuEvenimentNl,
 };
 
 const FONTS = `
@@ -113,9 +124,139 @@ function formatPret(p, lang) {
   );
 }
 
+function descarcaMeniuEvenimentPDF(imagine) {
+  const img = new Image();
+  img.onload = () => {
+    const orientation = img.width >= img.height ? "landscape" : "portrait";
+    const doc = new jsPDF({ orientation, unit: "pt", format: "a4" });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const scale = Math.min(pageWidth / img.width, pageHeight / img.height);
+    const w = img.width * scale;
+    const h = img.height * scale;
+    const x = (pageWidth - w) / 2;
+    const y = (pageHeight - h) / 2;
+    doc.addImage(img, "JPEG", x, y, w, h);
+    doc.save("meniu-eveniment-the-garden-terrace.pdf");
+  };
+  img.src = imagine;
+}
+
+function ModalMeniuEveniment({ onClose, t, lang }) {
+  const imagine = IMAGINI_MENIU_EVENIMENT[lang] || IMAGINI_MENIU_EVENIMENT.ro;
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.75)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 20,
+        zIndex: 1000,
+      }}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          background: "#12201A",
+          border: "1px solid #C9A227",
+          borderRadius: 14,
+          padding: 20,
+          maxWidth: "min(560px, 100%)",
+          maxHeight: "90vh",
+          display: "flex",
+          flexDirection: "column",
+          gap: 16,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "'Fraunces', serif",
+              fontSize: 20,
+              color: "#F3EFE3",
+            }}
+          >
+            {t("eventMenu.modalTitle")}
+          </span>
+          <button
+            onClick={onClose}
+            aria-label={t("eventMenu.close")}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "#DCE4DB",
+              cursor: "pointer",
+              display: "flex",
+              padding: 4,
+            }}
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <div
+          style={{
+            overflowY: "auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: 20,
+          }}
+        >
+          {imagine && (
+            <img
+              src={imagine}
+              alt={t("eventMenu.modalTitle")}
+              style={{
+                width: "100%",
+                maxHeight: "70vh",
+                objectFit: "contain",
+                borderRadius: 8,
+              }}
+            />
+          )}
+        </div>
+
+        <button
+          onClick={() => descarcaMeniuEvenimentPDF(imagine)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 8,
+            padding: "10px 18px",
+            borderRadius: 999,
+            border: "1px solid transparent",
+            background: "#C9A227",
+            color: "#12201A",
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 14,
+            fontWeight: 600,
+            cursor: "pointer",
+          }}
+        >
+          <Download size={16} strokeWidth={2} />
+          {t("eventMenu.download")}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function MeniuRestaurant() {
   const { t, i18n } = useTranslation("menu");
   const [activ, setActiv] = useState("toate");
+  const [arataMeniuEveniment, setArataMeniuEveniment] = useState(false);
 
   const itemiFiltrati = useMemo(
     () =>
@@ -223,7 +364,37 @@ export default function MeniuRestaurant() {
               </button>
             );
           })}
+
+          <button
+            onClick={() => setArataMeniuEveniment(true)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 7,
+              padding: "9px 16px",
+              borderRadius: 999,
+              border: "1px solid #C9A227",
+              background: "transparent",
+              color: "#C9A227",
+              fontFamily: "'Inter', sans-serif",
+              fontSize: 13.5,
+              fontWeight: 600,
+              cursor: "pointer",
+              transition: "all 0.18s ease",
+            }}
+          >
+            <FileText size={15} strokeWidth={2} />
+            {t("eventMenu.button")}
+          </button>
         </div>
+
+        {arataMeniuEveniment && (
+          <ModalMeniuEveniment
+            onClose={() => setArataMeniuEveniment(false)}
+            t={t}
+            lang={i18n.language}
+          />
+        )}
 
         {/* Listă preparate */}
         <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
@@ -298,19 +469,6 @@ export default function MeniuRestaurant() {
           )}
         </div>
 
-        {/* Footer */}
-        <div
-          style={{
-            marginTop: 40,
-            textAlign: "center",
-            fontSize: 12.5,
-            color: "#6E8577",
-            fontFamily: "'Inter', sans-serif",
-          }}
-        >
-          📍 Kruiskouter 4, 1730 Asse, Bruxelles &nbsp;·&nbsp; 📞 +32 486 277
-          791
-        </div>
       </div>
     </div>
   );

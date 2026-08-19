@@ -100,3 +100,22 @@
 		font-size: 14px;
 	}
 }
+
+/* Titlul hero (ex: "Despre noi") era împins peste header-ul fix pe mobil
+   din cauza padding-ului mare moștenit de pe desktop, iar reducerea
+   padding-ului lăsa un gol deasupra pozei (poziționată cu "bottom").
+   Aici forțăm poza să acopere tot .home și centrăm textul cu flex,
+   cu spațiu suficient sub header. Se aplică la .home/.home_container
+   folosite atât în About.jsx cât și în Hero.jsx (Contact, Blog, Menu). */
+@media only screen and (max-width: 991px) {
+	.home .home_container {
+		top: 0 !important;
+		bottom: 0 !important;
+		height: 100% !important;
+		padding: 90px 20px 24px !important;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}

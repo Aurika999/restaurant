@@ -1,13 +1,18 @@
 {
   "heading": "Blogul nostru",
+  "readMore": "Citește mai mult",
+  "readLess": "Citește mai puțin",
   "posts": [
     "Descoperă povestea din spatele preparatelor noastre semnate și tot ce ne face să fim mândri de bucătăria restaurantului.",
     "Rețeta săptămânii: un preparat simplu de reprodus acasă, inspirat din meniul nostru sezonier.",
     "Aflați cum selectăm ingredientele proaspete și de ce calitatea rămâne prioritatea noastră numărul unu.",
     "O privire în culise: cum pregătește echipa noastră de bucătari fiecare eveniment special.",
     "Sfaturi de la bucătarul nostru pentru a combina perfect vinul cu preparatele din meniu.",
-    "De ce terasa noastră este locul ideal pentru evenimente private și cine în familie."
+    "De ce terasa noastră este locul ideal pentru evenimente private și cine în familie.",
+    "Cum alegi sala de eveniment potrivită pentru ziua de naștere sau botez: câteva repere esențiale înainte de a semna o rezervare."
   ],
+  "postTitles": ["", "", "", "", "", "", "Cum alegi sala de eveniment potrivită pentru ziua de naștere sau botez"],
+  "postContents": ["", "", "", "", "", "", "Alegerea sălii potrivite este, de multe ori, decizia care dă tonul întregului eveniment, fie că vorbim despre o zi de naștere sau despre un botez. Primul lucru de verificat este capacitatea reală a sălii raportată la numărul de invitați: o sală prea mare lasă evenimentul \"gol\", iar una prea mică devine incomodă pentru mese, scaune, ring de dans sau spațiul de joacă pentru copii, în cazul botezurilor.\n\nLocația și accesul contează la fel de mult ca decorul. O sală ușor accesibilă, cu parcare suficientă pentru invitați și, ideal, aproape de zona de acces facil pentru cei mai în vârstă sau pentru familiile cu copii mici, reduce stresul din ziua evenimentului. Merită vizitată sala fizic înainte de rezervare, nu doar pe baza pozelor, pentru a-ți face o imagine reală asupra luminii naturale, înălțimii tavanului și atmosferei generale.\n\nAmbianța și posibilitatea de personalizare fac diferența între o sală \"standard\" și una memorabilă. O terasă sau o sală cu elemente naturale, verdeață și lumină bună pentru fotografii oferă un cadru care are nevoie de puțin decor suplimentar, ceea ce reduce și bugetul alocat aranjamentelor.\n\nUn alt criteriu esențial este ce servicii sunt incluse: meniul, personalul de servire, sonorizarea, posibilitatea de a aduce un artist sau DJ, precum și flexibilitatea programului (cât timp aveți sala la dispoziție, dacă există opțiunea de prelungire). O echipă care vine în întâmpinarea acestor detalii, cu un meniu care poate fi adaptat pentru copii sau pentru invitați cu cerințe speciale, transformă organizarea într-o experiență relaxată, nu într-o listă lungă de compromisuri.\n\nLa The Garden Terrace punem la dispoziție o terasă generoasă, cu ambianță naturală și meniu adaptabil pentru evenimente private de tipul zilelor de naștere sau al botezurilor — vă invităm să ne contactați pentru a stabili împreună detaliile potrivite pentru evenimentul dumneavoastră."],
   "reservations": {
     "stars": "5 Stele",
     "heading": "Rezervă o masă",
