@@ -51,7 +51,8 @@ const Header = ({ dark }) => {
                                         <li><Link to="/">{t("common:nav.home")}</Link></li>
                                         <li><Link to="/about">{t("common:nav.about")}</Link></li>
                                         <li><Link to="/menu">{t("common:nav.menu")}</Link></li>
-                                        <li><Link to="/blog">{t("common:nav.blog")}</Link></li>
+                                        {/* Blog ascuns temporar */}
+                                        {/* <li><Link to="/blog">{t("common:nav.blog")}</Link></li> */}
                                         <li><Link to="/contact">{t("common:nav.contact")}</Link></li>
                                     </ul>
                                 </nav>

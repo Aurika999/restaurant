@@ -12,7 +12,8 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
                     <li><Link to="/" onClick={closeMenu}>{t("common:nav.home")}</Link></li>
                     <li><Link to="/about" onClick={closeMenu}>{t("common:nav.about")}</Link></li>
                     <li><Link to="/menu" onClick={closeMenu}>{t("common:nav.menu")}</Link></li>
-                    <li><Link to="/blog" onClick={closeMenu}>{t("common:nav.blog")}</Link></li>
+                    {/* Blog ascuns temporar */}
+                    {/* <li><Link to="/blog" onClick={closeMenu}>{t("common:nav.blog")}</Link></li> */}
                     <li><Link to="/contact" onClick={closeMenu}>{t("common:nav.contact")}</Link></li>
                 </ul>
                 <LanguageSwitcher />

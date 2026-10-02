@@ -7,7 +7,8 @@ import MenuPage from "./pages/ManuPage";
 import "./styles/main_styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from "./pages/About";
-import Blog from "./pages/Blog";
+// Blog ascuns temporar
+// import Blog from "./pages/Blog";
 
 function App() {
     return (
@@ -21,7 +22,8 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="menu" element={<MenuPage />} />
                     <Route path="contact" element={<Contact />} />
-                    <Route path="/blog" element ={<Blog />}/>
+                    {/* Blog ascuns temporar */}
+                    {/* <Route path="/blog" element ={<Blog />}/> */}
 
                 </Route>
 

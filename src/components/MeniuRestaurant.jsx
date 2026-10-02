@@ -25,10 +25,15 @@ import ciuperciSmantana from "../assets/images/menu_dishes/ciuperci_smantana.jpg
 import borsUcrainesc from "../assets/images/menu_dishes/bors_ucrainesc.jpg";
 import derunaCarne from "../assets/images/menu_dishes/deruna_carne.jpg";
 import vinRosu from "../assets/images/menu_dishes/vin_rosu.jpg";
+import vinAlb from "../assets/images/menu_dishes/vin_alb.png";
 import sampanie from "../assets/images/menu_dishes/sampanie.jpg";
 import capucino from "../assets/images/menu_dishes/capucino.jpg";
+import espresso from "../assets/images/menu_dishes/espresso.png";
+import bereHalba from "../assets/images/menu_dishes/bere_halba.png";
+import limonada from "../assets/images/menu_dishes/limonada.png";
 import clatiteBranza from "../assets/images/menu_dishes/clatite_branza.jpg";
 import cheesecake from "../assets/images/menu_dishes/cheesecake.jpg";
+import clatiteCiocolata from "../assets/images/menu_dishes/clatite_ciocolata.png";
 
 const IMAGINI_PREPARATE = {
   1: ardeiUmpluti,
@@ -49,10 +54,15 @@ const IMAGINI_PREPARATE = {
   16: borsUcrainesc,
   17: derunaCarne,
   18: vinRosu,
+  19: vinAlb,
   20: sampanie,
   21: capucino,
+  22: espresso,
+  23: bereHalba,
+  25: limonada,
   26: clatiteBranza,
   27: cheesecake,
+  28: clatiteCiocolata,
 };
 
 const IMAGINI_MENIU_EVENIMENT = {

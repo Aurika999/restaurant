@@ -136,6 +136,16 @@ const Contact = () => {
                                                     <i className="fa fa-facebook"></i>
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/thegarden.terrace" target="_blank" rel="noopener noreferrer">
+                                                    <i className="fa-brands fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.tiktok.com/@the.garden.terrace" target="_blank" rel="noopener noreferrer">
+                                                    <i className="fa-brands fa-tiktok"></i>
+                                                </a>
+                                            </li>
                                             {/*<li>*/}
                                             {/*    <a href="#">*/}
                                             {/*        <i className="fa fa-twitter"></i>*/}
